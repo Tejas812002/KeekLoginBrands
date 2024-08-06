@@ -1,12 +1,27 @@
+/* eslint-disable no-unused-vars */
+import { Route, Routes } from "react-router-dom";
+import ImagePanel from "./Login/Components/ImagePanel";
 import LoginPage from "./Login/Components/LoginPage";
+import SignUpPage from "./Login/Components/SignUpPage";
+import MobileSignUpPage from "./Login/Components/MobileSignUpPage";
+import VerifyNumber from "./Login/Components/VerifyNumber";
+import ForgetPass1 from "./Login/Components/ForgetPass1";
+import ForgetPass2 from "./Login/Components/ForgetPass2";
 
 const App = () => {
   return (
-    <div className="flex w-[1440px] h-[960px] bg-slate-600">
+    <div className="flex w-[1440px] h-[960px] font-openSans">
       {/* image panel */}
-      <div className="w-[874px] h-[975px] bg-slate-300">image</div>
+      <ImagePanel />
       <div>
-        <LoginPage />
+        <Routes>
+          <Route path="/" element={<LoginPage />} />
+          <Route path="/signup" element={<SignUpPage />} />
+          <Route path="/mobilesignup" element={<MobileSignUpPage />} />
+          <Route path="/verifynumber" element={<VerifyNumber />} />
+          <Route path="/forgotpass" element={<ForgetPass1 />} />
+          <Route path="/forgotPass2" element={<ForgetPass2 />} />
+        </Routes>
       </div>
     </div>
   );
