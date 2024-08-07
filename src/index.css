@@ -4,5 +4,8 @@
 @tailwind utilities;
 @font-face {
   font-family: "Great Mango";
-  src: url("../src/assets/Great\ Mango.ttf");
+  src: url("../src/assets/Great-Mango.ttf") format('ttf'),
+        url("../src/assets/Great-Mango.otf") format('otf');
+  font-weight: normal;
+  font-style: normal;
 }
