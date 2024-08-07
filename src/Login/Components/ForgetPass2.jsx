@@ -1,7 +1,31 @@
+import { useRef, useState } from "react";
 import { FiChevronLeft } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
 const ForgetPass2 = () => {
+
+   const [otp, setOtp] = useState(["", "", "", ""]);
+   const inputsRef = useRef([]);
+
+
+  const handleChange = (e, index) => {
+    const value = e.target.value;
+    if (/^\d?$/.test(value)) {
+      const newOtp = [...otp];
+      newOtp[index] = value;
+      setOtp(newOtp);
+      if (value && index < 3) {
+        inputsRef.current[index + 1].focus();
+      }
+    }
+  };
+
+  const handleKeyDown = (e, index) => {
+    if (e.key === "Backspace" && index > 0 && otp[index] === "") {
+      inputsRef.current[index - 1].focus();
+    }
+  };
+
   return (
     <div className="px-[35px]">
       <Link to={"/forgotpass"}>
@@ -27,26 +51,18 @@ const ForgetPass2 = () => {
           </div>
         </p>
         <div className="flex space-x-5 mb-4 size-[55px] ">
-          <input
-            type="text"
-            className="w-12 h-12 rounded-xl border border-[#363939] text-center"
-            maxLength="1"
-          />
-          <input
-            type="text"
-            className="w-12 h-12  rounded-xl border border-[#363939]"
-            maxLength="1"
-          />
-          <input
-            type="text"
-            className="w-12 h-12  rounded-xl border border-[#363939]"
-            maxLength="1"
-          />
-          <input
-            type="text"
-            className="w-12 h-12  rounded-xl border border-[#363939]"
-            maxLength="1"
-          />
+          {otp.map((value, index) => (
+            <input
+              key={index}
+              type="text"
+              value={value}
+              onChange={(e) => handleChange(e, index)}
+              onKeyDown={(e) => handleKeyDown(e, index)}
+              maxLength="1"
+              className="w-[50px] h-[50px]  rounded-[14px] border border-[#363939] text-center text-[24px] font-semibold focus:outline-none"
+              ref={(el) => (inputsRef.current[index] = el)}
+            />
+          ))}
         </div>
         <div className="flex flex-row space-x-2">
           <h4 className="text-lg text-[#000000] text-[16px]  ">

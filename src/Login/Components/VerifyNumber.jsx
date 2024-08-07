@@ -25,28 +25,28 @@ const VerifyNumber = () => {
   };
 
   return (
-    <div className="Hero ml-6">
+    <div className="Hero ml-10">
       <div className="flex items-center mt-8">
         <Link to={"/mobilesignup"}>
           <button>
             <FiChevronLeft className="mr-1" />
           </button>
-          <button className="text-black text-base font-normal font-['Open Sans']">
+          <button className=" text-base font-normal ">
             Back
           </button>
         </Link>
       </div>
       <div className="text-wrapper pt-14">
-        <div className="text-black text-[34px] font-normal font-['Open Sans']">
+        <div className=" text-[34px] font-normal ">
           Verify Mobile Number
         </div>
         <div className="self-stretch">
-          <span className="text-[#8e9090] text-base font-normal font-['Open Sans'] whitespace-nowrap">
+          <span className="text-[#8e9090] text-base font-normal  whitespace-nowrap">
             Check your mobile for SMS message. We’ve sent you otp
           </span>
-          <div className="text-[#8e9090] text-base font-normal font-['Open Sans']">
+          <div className="text-[#8e9090] text-base font-normal ">
             <span>at </span>
-            <span className="text-[#0066ff] text-base font-semibold font-['Open Sans'] underline">
+            <span className="text-[#0066ff] text-base font-semibold  underline">
               98XXXXX112
             </span>
           </div>
@@ -61,23 +61,23 @@ const VerifyNumber = () => {
             onChange={(e) => handleChange(e, index)}
             onKeyDown={(e) => handleKeyDown(e, index)}
             maxLength="1"
-            className="w-[55px] h-[55px] rounded-[14px] border border-[#363939] text-center text-[24px] font-semibold focus:outline-none"
+            className="w-[50px] h-[50px]  rounded-[14px] border border-[#363939] text-center text-[24px] font-semibold focus:outline-none"
             ref={(el) => (inputsRef.current[index] = el)}
           />
         ))}
       </div>
       <div className="mt-5">
         <div className="h-[22px] justify-start items-start gap-2 inline-flex">
-          <div className="text-center text-black text-base font-normal font-['Open Sans']">
+          <div className="text-center  text-base font-normal ">
             Didn’t receive the SMS?
           </div>
-          <button className="text-[#0066ff] text-base font-normal font-['Open Sans']">
+          <button className="text-[#0066ff] text-base font-normal ">
             Resend Otp
           </button>
         </div>
       </div>
       <div className="self-stretch h-[50px] mt-5 px-4 bg-[#0066ff] rounded-[10px] justify-center items-center gap-2 inline-flex">
-        <button className="items-center mx-40 text-center text-white text-lg font-normal font-['Open Sans'] leading-[18px]">
+        <button className="items-center mx-40 text-center text-white text-lg font-normal  leading-[18px]">
           Create Account
         </button>
       </div>

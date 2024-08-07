@@ -27,7 +27,7 @@ const ForgetPass1 = () => {
             </h4>
             <input
               type="email"
-              className="w-full bg-transparent rounded-md border py-[16px] px-[14px] border-[#000000] text-[#B1B2B2]"
+              className="w-full bg-transparent rounded-md border py-[16px] px-[14px] border-[#000000]"
               placeholder="Enter Email or Mobile Number "
             />
           </div>

@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 const ForgetPass3 = () => {
 
     const [shoPass, setShowPass] = useState(false);
+    const [shoPass2, setShowPass2] = useState(false);
   return (
     <div className="ml-8">
       <div className="btn mt-[50px]">
@@ -61,18 +62,18 @@ const ForgetPass3 = () => {
           </label>
           <input
             className="border border-[#363939] px-5 py-3 w-[500px] rounded-lg"
-            type={`${shoPass ? "text" : "password"}`}
+            type={`${shoPass2 ? "text" : "password"}`}
             name=""
             id=""
             placeholder="Password"
           />
           <div
             onClick={() => {
-              setShowPass(!shoPass);
+              setShowPass2(!shoPass2);
             }}
             className="absolute top-11 right-6 pl-3 flex items-center"
           >
-            {shoPass ? (
+            {shoPass2 ? (
               <IoEyeOutline className="text-2xl opacity-50" />
             ) : (
               <BsEyeSlash className="text-2xl opacity-50" />

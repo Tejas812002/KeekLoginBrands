@@ -10,7 +10,7 @@ const MobileSignUpPage = () => {
 
   const countryCodes = [
     { code: "+1", country: "US" },
-    { code: "+91", country: "India" },
+    { code: "+91", country: "IND" },
     { code: "+44", country: "UK" },
     // Add more countries as needed
   ];
@@ -52,8 +52,8 @@ const MobileSignUpPage = () => {
   };
 
   return (
-    <div className="hero ml-6">
-      <Link to={"/signup"}>
+    <div className="hero ml-10">
+      <Link to={"/"}>
         <div className="flex items-center mt-8">
           <button>
             <FiChevronLeft className="mr-1" />
@@ -114,7 +114,7 @@ const MobileSignUpPage = () => {
                   <div className="text-[#0066ff] text-base font-normal font-['Open Sans']">
                     {selectedCode}
                   </div>
-                  <FiChevronDown className="ml-2 text-[#0066ff]" />
+                  <FiChevronDown className="ml-10 text-[#0066ff]" />
                 </div>
                 {isDropdownOpen && (
                   <div className="absolute top-full left-0 mt-2 w-full bg-white border border-[#363939] rounded-lg shadow-lg z-10">
