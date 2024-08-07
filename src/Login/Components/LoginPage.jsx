@@ -26,10 +26,12 @@ const LoginPage = () => {
           <button className="border py-[14px] px-[80px] rounded-lg flex items-center">
             <FcGoogle className="text-2xl mr-3" /> <span>Google</span>
           </button>
-          <button className="border py-[14px] px-[44px] rounded-lg flex items-center">
-            <FaMobileAlt className="text-2xl mr-3 opacity-60" />{" "}
-            <span>Mobile number</span>
-          </button>
+          <Link to={"/mobilesignup"}>
+            <button className="border py-[14px] px-[44px] rounded-lg flex items-center">
+              <FaMobileAlt className="text-2xl mr-3 opacity-60" />{" "}
+              <span>Mobile number</span>
+            </button>
+          </Link>
         </div>
         <div className="flex items-center mb-5">
           <hr className="w-1/2 text-[#B1B2B2] " />
@@ -48,6 +50,7 @@ const LoginPage = () => {
                 name=""
                 id=""
                 placeholder="John.doe@gmail.com"
+                required
               />
             </div>
             <div className="relative">
@@ -60,6 +63,7 @@ const LoginPage = () => {
                 name=""
                 id=""
                 placeholder="Password"
+                required
               />
               <div
                 onClick={() => {

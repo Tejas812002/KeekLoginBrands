@@ -9,9 +9,9 @@ const MobileSignUpPage = () => {
   const [selectedCode, setSelectedCode] = useState("+91");
 
   const countryCodes = [
-    { code: "+1", country: "United States" },
+    { code: "+1", country: "US" },
     { code: "+91", country: "India" },
-    { code: "+44", country: "United Kingdom" },
+    { code: "+44", country: "UK" },
     // Add more countries as needed
   ];
 

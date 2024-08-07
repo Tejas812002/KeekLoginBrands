@@ -27,10 +27,12 @@ const SignUpPage = () => {
           <button className="border py-[14px] px-[80px] rounded-lg flex items-center">
             <FcGoogle className="text-2xl mr-3" /> <span>Google</span>
           </button>
-          <button className="border py-[14px] px-[44px] rounded-lg flex items-center">
-            <FaMobileAlt className="text-2xl mr-3 opacity-60" />{" "}
-            <span>Mobile number</span>
-          </button>
+          <Link to={"/mobilesignup"}>
+            <button className="border py-[14px] px-[44px] rounded-lg flex items-center">
+              <FaMobileAlt className="text-2xl mr-3 opacity-60" />{" "}
+              <span>Mobile number</span>
+            </button>
+          </Link>
         </div>
         <div className="flex items-center mb-5">
           <hr className="w-1/2 text-[#B1B2B2] " />
@@ -49,6 +51,7 @@ const SignUpPage = () => {
                 name=""
                 id=""
                 placeholder="John.doe@gmail.com"
+                required
               />
             </div>
             <div className="mb-5">
@@ -61,6 +64,7 @@ const SignUpPage = () => {
                 name=""
                 id=""
                 placeholder="John.doe@gmail.com"
+                required
               />
             </div>
             <div className="relative">
@@ -73,6 +77,7 @@ const SignUpPage = () => {
                 name=""
                 id=""
                 placeholder="Password"
+                required
               />
               <div
                 onClick={() => {
@@ -91,21 +96,19 @@ const SignUpPage = () => {
               Must be at least 8 characters.
             </div>
             <div className="mb-7">
-              <input type="checkbox" name="" id="term" className="mr-2" />
+              <input type="checkbox" name="" id="term" className="mr-2" required/>
               <label htmlFor="term">
                 I Agree to
                 <span className="text-[#06F]">Terms & Condition</span>
               </label>
             </div>
             <div className="mb-[42px]">
-              <Link to={"/mobilesignup"}>
-                <button
-                  type="submit"
-                  className="w-full text-center text-white py-4 rounded-[10px] bg-[#0066FF]"
-                >
-                  Sign up
-                </button>
-              </Link>
+              <button
+                type="submit"
+                className="w-full text-center text-white py-4 rounded-[10px] bg-[#0066FF]"
+              >
+                Sign up
+              </button>
             </div>
           </form>
           <div className="mb-[26px]">

@@ -7,11 +7,11 @@ import MobileSignUpPage from "./Login/Components/MobileSignUpPage";
 import VerifyNumber from "./Login/Components/VerifyNumber";
 import ForgetPass1 from "./Login/Components/ForgetPass1";
 import ForgetPass2 from "./Login/Components/ForgetPass2";
+import ForgetPass3 from "./Login/Components/ForgetPass3";
 
 const App = () => {
   return (
     <div className="flex w-[1440px] h-[960px] font-openSans">
-      {/* image panel */}
       <ImagePanel />
       <div>
         <Routes>
@@ -20,7 +20,8 @@ const App = () => {
           <Route path="/mobilesignup" element={<MobileSignUpPage />} />
           <Route path="/verifynumber" element={<VerifyNumber />} />
           <Route path="/forgotpass" element={<ForgetPass1 />} />
-          <Route path="/forgotPass2" element={<ForgetPass2 />} />
+          <Route path="/forgotpass2" element={<ForgetPass2 />} />
+          <Route path="/forgotpass3" element={<ForgetPass3 />} />
         </Routes>
       </div>
     </div>
