@@ -11,9 +11,11 @@ import ForgetPass3 from "./Login/Components/ForgetPass3";
 
 const App = () => {
   return (
-    <div className="flex w-[1440px] h-[960px] font-openSans">
-      <ImagePanel />
+    <div className="flex w-[1440px] h-screen max-h-[900px] font-openSans">
       <div>
+        <ImagePanel />
+      </div>
+      <div className="ml-[850px]">
         <Routes>
           <Route path="/" element={<LoginPage />} />
           <Route path="/signup" element={<SignUpPage />} />

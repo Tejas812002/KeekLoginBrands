@@ -10,7 +10,7 @@ const SignUpPage = () => {
   const [shoPass, setShowPass] = useState(false);
   return (
     <div>
-      <div className="ml-11 mt-[66px]">
+      <div className="ml-11 mt-[36px]">
         <h1 className="">
           <span className="font-semibold text-[32px] text-[#384EDD]">
             Sign up |{" "}
@@ -23,14 +23,15 @@ const SignUpPage = () => {
             account.
           </p>
         </div>
-        <div className="flex items-center gap-5 mb-[34px]">
-          <button className="border py-[14px] px-[80px] rounded-lg flex items-center">
-            <FcGoogle className="text-2xl mr-3" /> <span>Google</span>
+        <div className="flex items-center gap-5 mb-[29px]">
+          <button className="border relative h-[43px] py-[12px] px-[122px] rounded-lg flex items-center">
+            <FcGoogle className="text-2xl mr-3 absolute left-1/3" />{" "}
+            <span className="absolute left-1/2">Google</span>
           </button>
           <Link to={"/mobilesignup"}>
-            <button className="border py-[14px] px-[44px] rounded-lg flex items-center">
-              <FaMobileAlt className="text-2xl mr-3 opacity-60" />{" "}
-              <span>Mobile number</span>
+            <button className="border relative h-[43px] py-[12px] px-[122px] rounded-lg flex items-center">
+              <FaMobileAlt className="text-2xl mr-3 absolute left-10 opacity-50" />
+              <span className="absolute left-[80px]">Mobile number</span>
             </button>
           </Link>
         </div>
@@ -42,11 +43,11 @@ const SignUpPage = () => {
         <div>
           <form action="" onSubmit={(e) => e.preventDefault()}>
             <div className="mb-5">
-              <label htmlFor="" className="text-lg block">
+              <label htmlFor="" className="block">
                 Name<span className="text-[#06F]">*</span>
               </label>
               <input
-                className="border border-[#363939] px-5 py-3 w-[500px] rounded-lg"
+                className="border h-[44px] border-[#363939] px-5 py-3 w-[500px] rounded-lg"
                 type="text"
                 name=""
                 id=""
@@ -55,11 +56,11 @@ const SignUpPage = () => {
               />
             </div>
             <div className="mb-5">
-              <label htmlFor="" className="text-lg block">
+              <label htmlFor="" className="block">
                 Email<span className="text-[#06F]">*</span>
               </label>
               <input
-                className="border border-[#363939] px-5 py-3 w-[500px] rounded-lg"
+                className="border h-[44px]  border-[#363939] px-5 py-3 w-[500px] rounded-lg"
                 type="email"
                 name=""
                 id=""
@@ -68,11 +69,11 @@ const SignUpPage = () => {
               />
             </div>
             <div className="relative">
-              <label htmlFor="" className="text-lg block">
+              <label htmlFor="" className="block">
                 Password<span className="text-[#06F]">*</span>
               </label>
               <input
-                className="border border-[#363939] px-5 py-3 w-[500px] rounded-lg"
+                className="border h-[44px]  border-[#363939] px-5 py-3 w-[500px] rounded-lg"
                 type={`${shoPass ? "text" : "password"}`}
                 name=""
                 id=""
@@ -83,7 +84,7 @@ const SignUpPage = () => {
                 onClick={() => {
                   setShowPass(!shoPass);
                 }}
-                className="absolute top-11 right-6 pl-3 flex items-center"
+                className="absolute top-1/2 right-6 pl-3 flex items-center"
               >
                 {shoPass ? (
                   <IoEyeOutline className="text-2xl opacity-50" />
@@ -96,13 +97,19 @@ const SignUpPage = () => {
               Must be at least 8 characters.
             </div>
             <div className="mb-7">
-              <input type="checkbox" name="" id="term" className="mr-2" required/>
+              <input
+                type="checkbox"
+                name=""
+                id="term"
+                className="mr-2"
+                required
+              />
               <label htmlFor="term">
                 I Agree to
                 <span className="text-[#06F]">Terms & Condition</span>
               </label>
             </div>
-            <div className="mb-[42px]">
+            <div className="mb-[22px]">
               <button
                 type="submit"
                 className="w-full text-center text-white py-4 rounded-[10px] bg-[#0066FF]"
