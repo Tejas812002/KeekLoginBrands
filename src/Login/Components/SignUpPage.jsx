@@ -129,10 +129,12 @@ const SignUpPage = () => {
           </div>
           <div className="text-center">
             Want to Sign up as a creator? &nbsp;
-            <span className="text-[#06F]">
-              Influencers page
-              <RiArrowRightUpLine className="inline-block text-lg text-[#06F]" />
-            </span>
+            <a href="https://keek-influencer-login.vercel.app/">
+              <span className="text-[#06F]">
+                Influencers page
+                <RiArrowRightUpLine className="inline-block text-lg text-[#06F]" />
+              </span>
+            </a>
           </div>
         </div>
       </div>

@@ -79,11 +79,9 @@ const LoginPage = () => {
                 )}
               </div>
             </div>
-              <div className="text-[#06F] text-end mt-2 mb-[29px]">
-            <Link to="/forgotpass">
-                Forget password?
-             </Link>
-              </div>
+            <div className="text-[#06F] text-end mt-2 mb-[29px]">
+              <Link to="/forgotpass">Forget password?</Link>
+            </div>
             <div className="mb-[35px]">
               <button
                 type="submit"
@@ -104,10 +102,12 @@ const LoginPage = () => {
           </div>
           <div className="text-center pb-[21px]">
             Don’t have an account?
-            <span className="text-[#06F]">
-              Influencers page
-              <RiArrowRightUpLine className="inline-block text-lg text-[#06F]" />
-            </span>
+            <a href="https://keek-influencer-login.vercel.app">
+              <span className="text-[#06F]">
+                Influencers page
+                <RiArrowRightUpLine className="inline-block text-lg text-[#06F]" />
+              </span>
+            </a>
           </div>
         </div>
       </div>
