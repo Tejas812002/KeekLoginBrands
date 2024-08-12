@@ -30,7 +30,7 @@ const MobileSignUpPage = () => {
 
   const handleMobileNumberChange = (e) => {
     const value = e.target.value;
-    if (/^\d*$/.test(value)) {
+    if (/^\d*$/.test(value) && value.length <= 13) {
       setMobileNumber(value);
     }
   };
@@ -73,13 +73,13 @@ const MobileSignUpPage = () => {
           </span>
         </div>
         <div className="tex-wrapper mt-5">
-          <div className="h-[25px] flex items-center gap-2">
+          <div className="h-[25px] flex items-center">
             <div className="text-black text-lg font-normal font-['Open Sans']">
               Name
             </div>
-            <div className="text-[#0066ff] text-xs font-normal font-['Open Sans']">
-              *
-            </div>
+            <span className="text-[#0066ff] text-xs font-normal font-['Open Sans']">
+            *
+            </span>
           </div>
           <div className="text-box mt-3">
             <div className="h-[50px] px-3.5 py-4 rounded-lg border border-[#363939] flex items-center">
@@ -96,13 +96,13 @@ const MobileSignUpPage = () => {
               <div className="text-black text-lg font-normal font-['Open Sans']">
                 Country code
               </div>
-              <div className="h-[25px] flex items-center gap-1">
+              <div className="h-[25px] flex items-center">
                 <div className="text-black text-lg font-normal font-['Open Sans']">
                   Mobile Number
                 </div>
-                <div className="text-[#0066ff] text-xs font-normal font-['Open Sans']">
-                  *
-                </div>
+                <span className="text-[#0066ff] text-xs font-normal font-['Open Sans']">
+                *
+                </span>
               </div>
             </div>
             <div className="input-box mt-3 flex items-center gap-2">

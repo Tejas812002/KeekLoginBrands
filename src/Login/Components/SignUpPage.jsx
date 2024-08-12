@@ -122,13 +122,13 @@ const SignUpPage = () => {
             <hr className="text-[#B1B2B2]" />
           </div>
           <div className="text-center mb-6">
-            Already Have an account?{" "}
+            Already Have an account?&nbsp;
             <Link to={"/"}>
               <span className="text-[#06F]">Login</span>
             </Link>
           </div>
           <div className="text-center">
-            Want to Sign up as a creator? &nbsp;
+            Want to Sign up as a creator?&nbsp;
             <a href="https://keek-influencer-login.vercel.app/">
               <span className="text-[#06F]">
                 Influencers page

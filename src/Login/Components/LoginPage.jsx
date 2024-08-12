@@ -95,13 +95,13 @@ const LoginPage = () => {
             <hr className="text-[#B1B2B2]" />
           </div>
           <div className="text-center mb-[21px]">
-            Don’t have an account?
+            Don’t have an account?&nbsp;
             <Link to={"/signup"}>
               <span className="text-[#06F]">Sign up</span>
             </Link>
           </div>
           <div className="text-center pb-[21px]">
-            Don’t have an account?
+            Don’t have an account?&nbsp;
             <a href="https://keek-influencer-login.vercel.app">
               <span className="text-[#06F]">
                 Influencers page
