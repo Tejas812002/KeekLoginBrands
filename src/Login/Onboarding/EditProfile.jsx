@@ -58,8 +58,11 @@ const PlatformComp = ({ setOnboardingVisibility }) => {
     );
 
     // Redirect to the next page (e.g., dashboard)
-    navigate("/"); // You can replace '/dashboard' with your target URL
+    window.location.href = "https://keek-one.vercel.app/";
     setOnboardingVisibility(false);
+
+    
+  
   };
 
   return (
